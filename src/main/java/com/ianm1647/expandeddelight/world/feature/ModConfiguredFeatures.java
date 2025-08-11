@@ -70,7 +70,7 @@ public class ModConfiguredFeatures {
 
     }
     public static RegistryKey<ConfiguredFeature<?, ?>> registerConfiguredKey(String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(ExpandedDelight.MODID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(ExpandedDelight.MODID, name));
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,

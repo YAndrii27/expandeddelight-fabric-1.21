@@ -1,0 +1,13 @@
+{
+  "type": "expandeddelight:juicing",
+  "inputA": {
+    "item": "minecraft:glow_berries"
+  },
+  "inputB": {
+    "item": "minecraft:sugar"
+  },
+  "output": {
+    "count": 1,
+    "id": "expandeddelight:glow_berry_juice"
+  }
+}

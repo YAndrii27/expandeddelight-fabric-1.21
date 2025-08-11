@@ -6,10 +6,11 @@ import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
 import com.ianm1647.expandeddelight.block.custom.DelightCropBlock;
 import com.ianm1647.expandeddelight.block.custom.JuicerBlock;
 import com.ianm1647.expandeddelight.block.custom.MortarPestleBlock;
-import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+//import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
+import com.ianm1647.expandeddelight.world.feature.ModConfiguredFeatures;
+import com.ianm1647.expandeddelight.world.feature.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -21,18 +22,21 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
+import java.util.Optional;
+
 public class BlockRegistry {
 
     public static void registerBlocks() {
         //blocks
         BlockList.CINNAMON_SAPLING = block("cinnamon_sapling",
-                new SaplingBlock(new CinnamonSaplingGenerator(), blockSettings(0f, 0f, BlockSoundGroup.GRASS)));
+                new SaplingBlock(ModSaplingGenerators.CINNAMON, blockSettings(0f, 0f, BlockSoundGroup.GRASS)));
         BlockList.CINNAMON_LOG = block("cinnamon_log",
                 new CinnamonLogBlock(blockSettings(2.0f, 2.0f, BlockSoundGroup.WOOD)));
+
         BlockList.SALT_ORE = block("salt_ore",
-                new ExperienceDroppingBlock(blockSettings(3.0f, 3.0f, BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(0, 2)));
+                new ExperienceDroppingBlock(UniformIntProvider.create(0, 2), blockSettings(3.0f, 3.0f, BlockSoundGroup.STONE).requiresTool()));
         BlockList.DEEPSLATE_SALT_ORE = block("deepslate_salt_ore",
-                new ExperienceDroppingBlock(blockSettings(4.5f, 3.0f, BlockSoundGroup.DEEPSLATE).requiresTool(), UniformIntProvider.create(0, 2)));
+                new ExperienceDroppingBlock(UniformIntProvider.create(0, 2), blockSettings(4.5f, 3.0f, BlockSoundGroup.DEEPSLATE).requiresTool()));
 
         //crates
         BlockList.ASPARAGUS_CRATE = block("asparagus_crate",
@@ -45,13 +49,13 @@ public class BlockRegistry {
         //crops
         //TODO: Fix status effects
         BlockList.WILD_ASPARAGUS = block("wild_asparagus",
-                new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
+                new WildCropBlock(StatusEffects.ABSORPTION, 0, AbstractBlock.Settings.copy(Blocks.TALL_GRASS)));
         BlockList.WILD_SWEET_POTATO = block("wild_sweet_potatoes",
-                new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
+                new WildCropBlock(StatusEffects.ABSORPTION, 0, AbstractBlock.Settings.copy(Blocks.TALL_GRASS)));
         BlockList.WILD_CHILI_PEPPER = block("wild_chili_pepper",
-                new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
+                new WildCropBlock(StatusEffects.ABSORPTION, 0, AbstractBlock.Settings.copy(Blocks.TALL_GRASS)));
         BlockList.WILD_PEANUTS = block("wild_peanuts",
-                new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
+                new WildCropBlock(StatusEffects.ABSORPTION, 0, AbstractBlock.Settings.copy(Blocks.TALL_GRASS)));
 
         //ExpandedDelight.LOGGER.info("ExpandedDelight blocks loaded");
     }
@@ -73,27 +77,27 @@ public class BlockRegistry {
             new JuicerBlock(blockSettings(1.0f, 2.0f, BlockSoundGroup.WOOD).nonOpaque()));
 
 
-    private static FabricBlockSettings blockSettings(float hardness, float resistance, BlockSoundGroup sound) {
-        return FabricBlockSettings.create().strength(hardness, resistance).sounds(sound);
+    private static AbstractBlock.Settings blockSettings(float hardness, float resistance, BlockSoundGroup sound) {
+        return AbstractBlock.Settings.create().strength(hardness, resistance).sounds(sound);
     }
 
-    private static FabricBlockSettings cropSettings() {
-        return FabricBlockSettings.copyOf(Blocks.WHEAT).sounds(BlockSoundGroup.CROP).breakInstantly().ticksRandomly().noCollision().nonOpaque();
+    private static AbstractBlock.Settings cropSettings() {
+        return  AbstractBlock.Settings.copy(Blocks.WHEAT).sounds(BlockSoundGroup.CROP).breakInstantly().ticksRandomly().noCollision().nonOpaque();
     }
 
     private static Block block(String name, Block block) {
         blockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(ExpandedDelight.MODID, name), block);
+        return Registry.register(Registries.BLOCK, Identifier.of(ExpandedDelight.MODID, name), block);
     }
 
     private static Item blockItem(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new BlockItem(block, new FabricItemSettings()));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new BlockItem(block, new Item.Settings()));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
     private static Block withoutBlockItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, new Identifier(ExpandedDelight.MODID, name), block);
+        return Registry.register(Registries.BLOCK, Identifier.of(ExpandedDelight.MODID, name), block);
     }
 }

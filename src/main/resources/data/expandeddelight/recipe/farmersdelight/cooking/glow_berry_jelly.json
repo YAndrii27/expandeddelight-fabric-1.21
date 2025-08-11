@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "id": "expandeddelight:glow_berry_jelly",
+    "count": 1
+  },
+  "container": {
+    "id": "expandeddelight:glass_jar",
+    "count": 1
+  },
+  "recipe_book_tab": "meals",
+  "experience": 1.0
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": {
+    "item": "expandeddelight:sweet_potato"
+  },
+  "result": {
+    "id": "expandeddelight:baked_sweet_potato"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

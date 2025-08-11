@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/vegetables"
+    },
+    {
+      "tag": "c:foods/pasta"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:foods/vegetables/chili_pepper"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "expandeddelight:peperonata",
+    "count": 1
+  },
+  "container": {
+    "id": "minecraft:bowl",
+    "count": 1
+  }
+}

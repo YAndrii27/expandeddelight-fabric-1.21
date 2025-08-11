@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "expandeddelight:deepslate_salt_ore"
+  },
+  "result":{
+    "id": "expandeddelight:salt_rock"
+  },
+  "experience": 0.1,
+  "cookingtime": 100
+}

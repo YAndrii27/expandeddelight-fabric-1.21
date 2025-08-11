@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:crops/peanut"
+    },
+    {
+      "tag": "c:crops/peanut"
+    },
+    {
+      "tag": "c:milk"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "id": "expandeddelight:peanut_butter"
+  }
+}

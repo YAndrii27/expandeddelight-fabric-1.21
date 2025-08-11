@@ -46,7 +46,7 @@ public class ModPlacedFeatures {
     }
 
     public static RegistryKey<PlacedFeature> registerPlacedKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(ExpandedDelight.MODID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(ExpandedDelight.MODID, name));
     }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {

@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 public class ExpandedDelight implements ModInitializer {
     public static final String MODID = "expandeddelight";
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
-    public static final RegistryKey<ItemGroup> GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MODID, "group"));
+    public static final RegistryKey<ItemGroup> GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MODID, "group"));
 
     public static ExpandedDelightConfig CONFIG = OmegaConfig.register(ExpandedDelightConfig.class);
 

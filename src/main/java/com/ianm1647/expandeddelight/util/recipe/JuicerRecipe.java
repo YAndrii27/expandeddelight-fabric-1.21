@@ -1,42 +1,42 @@
 package com.ianm1647.expandeddelight.util.recipe;
 
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.network.RegistryByteBuf;
+import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public class JuicerRecipe implements Recipe<SimpleInventory> {
-    private final Identifier id;
-    private final ItemStack output;
-    private final DefaultedList<Ingredient> recipeItems;
-
-    public JuicerRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
-        this.id = id;
-        this.output = output;
-        this.recipeItems = recipeItems;
-    }
+public record JuicerRecipe(Ingredient inputA, Ingredient inputB, ItemStack output) implements Recipe<JuiceRecipeInput> {
 
     @Override
-    public boolean matches(SimpleInventory inventory, World world) {
-        boolean firstSlot = recipeItems.get(0).test(inventory.getStack(0));
-        boolean secondSlot = recipeItems.get(1).test(inventory.getStack(1));
-        if(firstSlot && secondSlot) {
-            return true;
+    public boolean matches(JuiceRecipeInput input, World world) {
+        if (world.isClient) {
+            return false;
         }
 
-        return false;
+        boolean firstSlot = inputA.test(input.getStackInSlot(0));
+//        System.out.println(input.getStackInSlot(0));
+        boolean secondSlot = inputB.test(input.getStackInSlot(1));
+//        System.out.println(input.getStackInSlot(1));
+        return firstSlot && secondSlot;
     }
 
     @Override
-    public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) { return output; }
+    public ItemStack craft(JuiceRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
+        return output.copy();
+    }
 
     @Override
     public boolean fits(int width, int height) {
@@ -44,8 +44,8 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public ItemStack getOutput(DynamicRegistryManager registryManager) {
-        return this.output.copy();
+    public ItemStack getResult(RegistryWrapper.WrapperLookup registriesLookup) {
+        return output;
     }
 
     public ItemStack getBottle() {
@@ -57,12 +57,10 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     }
 
     public DefaultedList<Ingredient> getIngredients() {
-        return this.recipeItems;
-    }
-
-    @Override
-    public Identifier getId() {
-        return id;
+        DefaultedList<Ingredient> list = DefaultedList.of();
+        list.add(inputA);
+        list.add(inputB);
+        return list;
     }
 
     @Override
@@ -73,5 +71,30 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     @Override
     public RecipeType<?> getType() {
         return RecipeRegistry.JUICER_TYPE;
+    }
+
+    public static class Serializer implements RecipeSerializer<JuicerRecipe> {
+        public static final MapCodec<JuicerRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
+                Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("inputA").forGetter(JuicerRecipe::inputA),
+                Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("inputB").forGetter(JuicerRecipe::inputB),
+                ItemStack.CODEC.fieldOf("output").forGetter(JuicerRecipe::output)
+        ).apply(inst, JuicerRecipe::new));
+
+        public static final PacketCodec<RegistryByteBuf, JuicerRecipe> STREAM_CODEC =
+                PacketCodec.tuple(
+                        Ingredient.PACKET_CODEC, JuicerRecipe::inputA,
+                        Ingredient.PACKET_CODEC, JuicerRecipe::inputB,
+                        ItemStack.PACKET_CODEC, JuicerRecipe::output,
+                        JuicerRecipe::new);
+
+        @Override
+        public MapCodec<JuicerRecipe> codec() {
+            return CODEC;
+        }
+
+        @Override
+        public PacketCodec<RegistryByteBuf, JuicerRecipe> packetCodec() {
+            return STREAM_CODEC;
+        }
     }
 }

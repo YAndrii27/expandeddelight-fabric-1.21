@@ -4,15 +4,16 @@ import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.item.ItemList;
 import com.ianm1647.expandeddelight.item.JuiceItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
@@ -93,77 +94,76 @@ public class ItemRegistry {
     }
 
     private static Item item(String name) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new Item(new FabricItemSettings()));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new Item(new Item.Settings()));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
     private static Item itemBlock(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new AliasedBlockItem(block, new FabricItemSettings()));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new AliasedBlockItem(block, new Item.Settings()));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
     private static Item food(String name, Item remainder, int hunger, float saturation) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new Item(new FabricItemSettings().recipeRemainder(remainder)
-                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).build())));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new Item(new Item.Settings().recipeRemainder(remainder)
+                        .food(new FoodComponent.Builder().nutrition(hunger).saturationModifier(saturation).build())));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
     private static Item foodSeed(String name, Block block, int hunger, float saturation) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new AliasedBlockItem(block, new FabricItemSettings().recipeRemainder(null)
-                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).build())));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new AliasedBlockItem(block, new Item.Settings().recipeRemainder(null)
+                        .food(new FoodComponent.Builder().nutrition(hunger).saturationModifier(saturation).build())));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
-    private static Item juice(String name, int hunger, float saturation, StatusEffect effect) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new JuiceItem(new FabricItemSettings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)
-                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).alwaysEdible()
+    private static Item juice(String name, int hunger, float saturation, RegistryEntry<StatusEffect> effect) {
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new JuiceItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)
+                        .food(new FoodComponent.Builder().nutrition(hunger).saturationModifier(saturation).alwaysEdible()
                                 .statusEffect(new StatusEffectInstance(effect, 200, 0), 1.0f).build())));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
-    private static Item jelly(String name, int hunger, float saturation, StatusEffect effect) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new Item(new FabricItemSettings().recipeRemainder(ItemList.GLASS_JAR).maxCount(16)
-                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
+    private static Item jelly(String name, int hunger, float saturation, RegistryEntry<StatusEffect> effect) {
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new Item(new Item.Settings().recipeRemainder(ItemList.GLASS_JAR).maxCount(16)
+                        .food(new FoodComponent.Builder().nutrition(hunger).saturationModifier(saturation)
                                 .statusEffect(new StatusEffectInstance(effect, 400, 0), 1.0f).build())));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
     private static Item salad(String name, int hunger, float saturation) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new Item(new FabricItemSettings().recipeRemainder(Items.BOWL).maxCount(16)
-                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new Item(new Item.Settings().recipeRemainder(Items.BOWL).maxCount(16)
+                        .food(new FoodComponent.Builder().nutrition(hunger).saturationModifier(saturation)
                                 .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 0), 1.0f).build())));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
-
     }
 
     private static Item stew(String name, int hunger, float saturation) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new Item(new FabricItemSettings().recipeRemainder(Items.BOWL).maxCount(16)
-                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
-                                .statusEffect(new StatusEffectInstance(ModEffects.COMFORT.get(), 2400, 0), 1.0f).build())));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new Item(new Item.Settings().recipeRemainder(Items.BOWL).maxCount(16)
+                        .food(new FoodComponent.Builder().nutrition(hunger).saturationModifier(saturation)
+                                .statusEffect(new StatusEffectInstance(ModEffects.COMFORT, 2400, 0), 1.0f).build())));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
     private static Item meal(String name, int hunger, float saturation) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(ExpandedDelight.MODID, name),
-                new Item(new FabricItemSettings().recipeRemainder(Items.BOWL).maxCount(16)
-                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
-                                .statusEffect(new StatusEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0f).build())));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(ExpandedDelight.MODID, name),
+                new Item(new Item.Settings().recipeRemainder(Items.BOWL).maxCount(16)
+                        .food(new FoodComponent.Builder().nutrition(hunger).saturationModifier(saturation)
+                                .statusEffect(new StatusEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1.0f).build())));
         ItemGroupEvents.modifyEntriesEvent(ExpandedDelight.GROUP).register(entries -> entries.add(item));
         return item;
     }

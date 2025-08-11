@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    [
+      {
+        "tag": "c:foods/raw_pork"
+      }
+    ],
+    {
+      "tag": "c:foods/vegetables/asparagus"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:cheese"
+    }
+  ],
+  "result": {
+    "id": "expandeddelight:asparagus_and_bacon_cheesy",
+    "count": 1
+  },
+  "container": {
+    "id": "minecraft:bowl",
+    "count": 1
+  },
+  "recipe_book_tab": "meals",
+  "experience": 1.0
+}

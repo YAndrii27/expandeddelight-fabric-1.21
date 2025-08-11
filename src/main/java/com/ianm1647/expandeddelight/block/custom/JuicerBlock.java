@@ -2,6 +2,7 @@ package com.ianm1647.expandeddelight.block.custom;
 
 import com.ianm1647.expandeddelight.block.entity.JuicerBlockEntity;
 import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -30,8 +31,15 @@ import java.util.stream.Stream;
 public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider{
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
+    public static final MapCodec<JuicerBlock> CODEC = JuicerBlock.createCodec(JuicerBlock::new);
+
     public JuicerBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return CODEC;
     }
 
     private static final VoxelShape SHAPE_NORTH = Stream.of(
@@ -147,11 +155,11 @@ public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider{
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof JuicerBlockEntity juicerBlockEntity) {
-                ItemStack stack = juicerBlockEntity.useBottleOnJuice(player.getStackInHand(hand));
+//                ItemStack stack = juicerBlockEntity.useBottleOnJuice(player.getStackInHand(hand));
                 if (stack != ItemStack.EMPTY) {
                     if (!player.getInventory().insertStack(stack)) {
                         player.dropItem(stack, false);
@@ -165,7 +173,7 @@ public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider{
                 }
             }
         }
-        return ActionResult.SUCCESS;
+        return ItemActionResult.SUCCESS;
     }
 
     @Nullable
@@ -176,6 +184,6 @@ public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider{
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, BlockEntityRegistry.JUICER, JuicerBlockEntity::tick);
+        return validateTicker(type, BlockEntityRegistry.JUICER, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }

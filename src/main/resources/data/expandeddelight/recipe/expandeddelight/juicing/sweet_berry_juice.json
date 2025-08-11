@@ -1,0 +1,13 @@
+{
+  "type": "expandeddelight:juicing",
+  "inputA": {
+    "item": "minecraft:sweet_berries"
+  },
+  "inputB":  {
+    "item": "minecraft:sugar"
+  },
+  "output": {
+    "count": 1,
+    "id": "expandeddelight:sweet_berry_juice"
+  }
+}

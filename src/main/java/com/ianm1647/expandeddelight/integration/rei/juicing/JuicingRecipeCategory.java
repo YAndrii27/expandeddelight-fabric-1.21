@@ -24,7 +24,7 @@ import java.util.List;
 
 @Environment(EnvType.CLIENT)
 public class JuicingRecipeCategory implements DisplayCategory<JuicingRecipeDisplay> {
-    private static final Identifier GUI_TEXTURE = new Identifier(ExpandedDelight.MODID, "textures/gui/juicer_gui.png");
+    private static final Identifier GUI_TEXTURE = Identifier.of(ExpandedDelight.MODID, "textures/gui/juicer_gui.png");
 
     public JuicingRecipeCategory() {
     }

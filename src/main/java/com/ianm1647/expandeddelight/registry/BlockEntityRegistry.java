@@ -20,7 +20,7 @@ public class BlockEntityRegistry {
     }
 
     private static <T extends BlockEntity> BlockEntityType<T> entity(String name, Factory<T> entity, Block block) {
-        return Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(ExpandedDelight.MODID, name),
+        return Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(ExpandedDelight.MODID, name),
                 FabricBlockEntityTypeBuilder.create(entity, block).build(null));
     }
 }
