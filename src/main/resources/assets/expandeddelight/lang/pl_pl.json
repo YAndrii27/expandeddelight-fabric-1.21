@@ -54,28 +54,45 @@
   "item.expandeddelight.juicer_item": "Wyciskarka do soków",
 
   "block.expandeddelight.asparagus_crate": "Skrzynka szparagów",
+  "item.expandeddelight.asparagus_crate": "Skrzynka szparagów",
   "block.expandeddelight.wild_asparagus": "Dzikie szparagi",
+  "item.expandeddelight.wild_asparagus": "Dzikie szparagi",
   "block.expandeddelight.asparagus_crop": "Szparagi",
+  "item.expandeddelight.asparagus_crop": "Szparagi",
 
   "block.expandeddelight.sweet_potato_crate": "Skrzynka batatów",
+  "item.expandeddelight.sweet_potato_crate": "Skrzynka batatów",
   "block.expandeddelight.wild_sweet_potatoes": "Dzikie bataty",
+  "item.expandeddelight.wild_sweet_potatoes": "Dzikie bataty",
   "block.expandeddelight.sweet_potatoes_crop": "Bataty",
+  "item.expandeddelight.sweet_potatoes_crop": "Bataty",
 
   "block.expandeddelight.chili_pepper_crate": "Skrzynka papryczki chili",
+  "item.expandeddelight.chili_pepper_crate": "Skrzynka papryczki chili",
   "block.expandeddelight.wild_chili_pepper": "Dzika papryczka chili",
+  "item.expandeddelight.wild_chili_pepper": "Dzika papryczka chili",
   "block.expandeddelight.chili_pepper_crop": "Papryczka chili",
+  "item.expandeddelight.chili_pepper_crop": "Papryczka chili",
 
   "block.expandeddelight.wild_peanuts": "Dzikie orzechy ziemne",
+  "item.expandeddelight.wild_peanuts": "Dzikie orzechy ziemne",
   "block.expandeddelight.peanut_crop": "Orzechy ziemne",
+  "item.expandeddelight.peanut_crop": "Orzechy ziemne",
 
   "block.expandeddelight.cinnamon_sapling": "Sadzonka cynamonowca",
+  "item.expandeddelight.cinnamon_sapling": "Sadzonka cynamonowca",
   "block.expandeddelight.cinnamon_log": "Kłoda cynamonowca",
+  "item.expandeddelight.cinnamon_log": "Kłoda cynamonowca",
   "block.expandeddelight.salt_ore": "Sól kamienna",
+  "item.expandeddelight.salt_ore": "Sól kamienna",
   "block.expandeddelight.deepslate_salt_ore": "Łupkowa sól kamienna",
+  "item.expandeddelight.deepslate_salt_ore": "Łupkowa sól kamienna",
 
   "block.expandeddelight.juicer": "Wyciskarka do soków",
+  "item.expandeddelight.juicer": "Wyciskarka do soków",
 
   "block.expandeddelight.mortar_and_pestle": "Moździerz i tłuczek",
+  "item.expandeddelight.mortar_and_pestle": "Moździerz i tłuczek",
   "block.expandeddelight.mortar_and_pestle.pass": "Tego nie można skruszyć...",
 
   "container.expandeddelight.juicer": "Wyciskarka do soków",

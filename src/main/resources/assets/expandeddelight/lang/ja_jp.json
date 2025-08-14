@@ -56,29 +56,46 @@
   "item.expandeddelight.juicer_item": "圧搾機",
 
   "block.expandeddelight.asparagus_crate": "アスパラガス入り木箱",
+  "item.expandeddelight.asparagus_crate": "アスパラガス入り木箱",
   "block.expandeddelight.wild_asparagus": "野生のアスパラガス",
+  "item.expandeddelight.wild_asparagus": "野生のアスパラガス",
   "block.expandeddelight.asparagus_crop": "アスパラガス",
+  "item.expandeddelight.asparagus_crop": "アスパラガス",
 
   "block.expandeddelight.sweet_potato_crate": "薩摩芋入り木箱",
+  "item.expandeddelight.sweet_potato_crate": "薩摩芋入り木箱",
   "block.expandeddelight.wild_sweet_potatoes": "野生の薩摩芋",
+  "item.expandeddelight.wild_sweet_potatoes": "野生の薩摩芋",
   "block.expandeddelight.sweet_potatoes_crop": "薩摩芋",
+  "item.expandeddelight.sweet_potatoes_crop": "薩摩芋",
 
   "block.expandeddelight.chili_pepper_crate": "唐辛子入り木箱",
+  "item.expandeddelight.chili_pepper_crate": "唐辛子入り木箱",
   "block.expandeddelight.wild_chili_pepper": "野生の唐辛子",
+  "item.expandeddelight.wild_chili_pepper": "野生の唐辛子",
   "block.expandeddelight.chili_pepper_crop": "唐辛子",
+  "item.expandeddelight.chili_pepper_crop": "唐辛子",
 
   "block.expandeddelight.wild_peanuts": "落花生の低木",
+  "item.expandeddelight.wild_peanuts": "落花生の低木",
   "block.expandeddelight.peanut_crop": "落花生",
+  "item.expandeddelight.peanut_crop": "落花生",
 
   "block.expandeddelight.cinnamon_sapling": "シナモンの苗木",
+  "item.expandeddelight.cinnamon_sapling": "シナモンの苗木",
   "block.expandeddelight.cinnamon_log": "シナモンの原木",
+  "item.expandeddelight.cinnamon_log": "シナモンの原木",
   "block.expandeddelight.salt_ore": "岩塩",
+  "item.expandeddelight.salt_ore": "岩塩",
   "block.expandeddelight.deepslate_salt_ore": "ディープスレートの岩塩",
+  "item.expandeddelight.deepslate_salt_ore": "ディープスレートの岩塩",
 
   "block.expandeddelight.mortar_and_pestle": "乳鉢と乳棒",
+  "item.expandeddelight.mortar_and_pestle": "乳鉢と乳棒",
   "block.expandeddelight.mortar_and_pestle.pass": "これは挽けない...",
 
   "block.expandeddelight.juicer": "圧搾機",
+  "item.expandeddelight.juicer": "圧搾機",
   "container.expandeddelight.juicer": "圧搾機",
   "expandeddelight.rei.juicing": "圧搾"
 }

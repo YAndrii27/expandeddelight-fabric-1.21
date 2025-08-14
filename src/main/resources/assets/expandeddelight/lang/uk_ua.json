@@ -54,28 +54,45 @@
   "item.expandeddelight.juicer_item": "Соківниця",
 
   "block.expandeddelight.asparagus_crate": "Ящик спаржі",
+  "item.expandeddelight.asparagus_crate": "Ящик спаржі",
   "block.expandeddelight.wild_asparagus": "Дика спаржа",
+  "item.expandeddelight.wild_asparagus": "Дика спаржа",
   "block.expandeddelight.asparagus_crop": "Спаржа",
+  "item.expandeddelight.asparagus_crop": "Спаржа",
 
   "block.expandeddelight.sweet_potato_crate": "Ящик батату",
+  "item.expandeddelight.sweet_potato_crate": "Ящик батату",
   "block.expandeddelight.wild_sweet_potatoes": "Дикий батат",
+  "item.expandeddelight.wild_sweet_potatoes": "Дикий батат",
   "block.expandeddelight.sweet_potatoes_crop": "Батат",
+  "item.expandeddelight.sweet_potatoes_crop": "Батат",
 
   "block.expandeddelight.chili_pepper_crate": "Ящик перцю чилі",
+  "item.expandeddelight.chili_pepper_crate": "Ящик перцю чилі",
   "block.expandeddelight.wild_chili_pepper": "Дикий перець чилі",
+  "item.expandeddelight.wild_chili_pepper": "Дикий перець чилі",
   "block.expandeddelight.chili_pepper_crop": "Перець чилі",
+  "item.expandeddelight.chili_pepper_crop": "Перець чилі",
 
   "block.expandeddelight.wild_peanuts": "Дикий арахіс",
+  "item.expandeddelight.wild_peanuts": "Дикий арахіс",
   "block.expandeddelight.peanut_crop": "Арахіс",
+  "item.expandeddelight.peanut_crop": "Арахіс",
 
   "block.expandeddelight.cinnamon_sapling": "Паросток кориці",
+  "item.expandeddelight.cinnamon_sapling": "Паросток кориці",
   "block.expandeddelight.cinnamon_log": "Корицева колода",
+  "item.expandeddelight.cinnamon_log": "Корицева колода",
   "block.expandeddelight.salt_ore": "Соляна руда",
+  "item.expandeddelight.salt_ore": "Соляна руда",
   "block.expandeddelight.deepslate_salt_ore": "Глибосланцева соляна руда",
+  "item.expandeddelight.deepslate_salt_ore": "Глибосланцева соляна руда",
 
   "block.expandeddelight.juicer": "Соківниця",
+  "item.expandeddelight.juicer": "Соківниця",
 
   "block.expandeddelight.mortar_and_pestle": "Ступка і товкачик",
+  "item.expandeddelight.mortar_and_pestle": "Ступка і товкачик",
   "block.expandeddelight.mortar_and_pestle.pass": "Це не те, що ви можете розтовкти...",
 
   "container.expandeddelight.juicer": "Соківниця",

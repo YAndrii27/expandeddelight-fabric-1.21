@@ -23,6 +23,12 @@
     ],
     "fabric-datagen": [
       "com.ianm1647.expandeddelight.ExpandedDelightDataGen"
+    ],
+    "rei_common": [
+      "com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREICommon"
+    ],
+    "rei_client": [
+      "com.ianm1647.expandeddelight.integration.rei.client.ExpandedDelightREIClient"
     ]
   },
 

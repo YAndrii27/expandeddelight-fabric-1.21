@@ -59,28 +59,45 @@
   "item.expandeddelight.juicer_item": "Spremiagrumi",
 
   "block.expandeddelight.asparagus_crate": "Cassetta Di Asparagi",
+  "item.expandeddelight.asparagus_crate": "Cassetta Di Asparagi",
   "block.expandeddelight.wild_asparagus": "Asparagi Selvatici",
+  "item.expandeddelight.wild_asparagus": "Asparagi Selvatici",
   "block.expandeddelight.asparagus_crop": "Asparagi",
+  "item.expandeddelight.asparagus_crop": "Asparagi",
 
   "block.expandeddelight.sweet_potato_crate": "Cassa Di Patate Dolci",
+  "item.expandeddelight.sweet_potato_crate": "Cassa Di Patate Dolci",
   "block.expandeddelight.wild_sweet_potatoes": "Patate dolci selvatiche",
+  "item.expandeddelight.wild_sweet_potatoes": "Patate dolci selvatiche",
   "block.expandeddelight.sweet_potatoes_crop": "Patate dolci",
+  "item.expandeddelight.sweet_potatoes_crop": "Patate dolci",
 
   "block.expandeddelight.chili_pepper_crate": "Cassa di peperoncino",
+  "item.expandeddelight.chili_pepper_crate": "Cassa di peperoncino",
   "block.expandeddelight.wild_chili_pepper": "Peperoncino Selvatico",
+  "item.expandeddelight.wild_chili_pepper": "Peperoncino Selvatico",
   "block.expandeddelight.chili_pepper_crop": "Peperoncini",
+  "item.expandeddelight.chili_pepper_crop": "Peperoncini",
 
   "block.expandeddelight.wild_peanuts": "Arachidi selvatiche",
+  "item.expandeddelight.wild_peanuts": "Arachidi selvatiche",
   "block.expandeddelight.peanut_crop": "Arachidi",
+  "item.expandeddelight.peanut_crop": "Arachidi",
 
   "block.expandeddelight.cinnamon_sapling": "Alberello Di Cannella",
+  "item.expandeddelight.cinnamon_sapling": "Alberello Di Cannella",
   "block.expandeddelight.cinnamon_log": "Tronco di cannella",
+  "item.expandeddelight.cinnamon_log": "Tronco di cannella",
   "block.expandeddelight.salt_ore": "Minerale di sale",
+  "item.expandeddelight.salt_ore": "Minerale di sale",
   "block.expandeddelight.deepslate_salt_ore": "Minerale di sale dell'ardesia profonda",
+  "item.expandeddelight.deepslate_salt_ore": "Minerale di sale dell'ardesia profonda",
 
   "block.expandeddelight.juicer": "Spremiagrumi",
+  "item.expandeddelight.juicer": "Spremiagrumi",
 
   "block.expandeddelight.mortar_and_pestle": "Mortaio e pestello",
+  "item.expandeddelight.mortar_and_pestle": "Mortaio e pestello",
   "block.expandeddelight.mortar_and_pestle.pass": "Non è qualcosa che puoi schiacciare...",
 
   "container.expandeddelight.juicer": "Spremiagrumi",

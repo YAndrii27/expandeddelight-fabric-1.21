@@ -1,31 +1,122 @@
 {
-  "item.expandeddelight.sweet_potato": "Kumara",
-  "item.expandeddelight.baked_sweet_potato": "Baked Kumara",
-  "item.expandeddelight.sweet_potato_salad": "Kumara Salad",
-  
-  "item.expandeddelight.grilled_cheese": "Cheese Toastie",
-  
-  "item.expandeddelight.chocolate_cookie": "Chocolate Biscuit",
-  "item.expandeddelight.sugar_cookie": "Sugary Biscuit",
-  "item.expandeddelight.snickerdoodle": "Cinnamon Biscuit",
+  "item.expandeddelight.asparagus": "Asparagus",
+  "item.expandeddelight.asparagus_seeds": "Asparagus Seeds",
+  "item.expandeddelight.asparagus_soup": "Asparagus Soup",
+  "item.expandeddelight.asparagus_soup_creamy": "Creamy Asparagus Soup",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Cheesy Asparagus and Bacon",
 
-  "item.expandeddelight.mac_and_cheese": "Macaroni and Cheese",
+  "item.expandeddelight.sweet_potato": "Sweet Kumara",
+  "item.expandeddelight.baked_sweet_potato": "Baked Sweet Kumara",
+  "item.expandeddelight.sweet_potato_salad": "Sweet Kumara Salad",
 
-  "item.expandeddelight.chili_pepper": "Chilli",
-  "item.expandeddelight.chili_pepper_seeds": "Chilli Seeds",
+  "item.expandeddelight.chili_pepper": "Chili Pepper",
+  "item.expandeddelight.chili_pepper_seeds": "Chili Pepper Seeds",
+  "item.expandeddelight.peperonata": "Peperonata",
 
-  "item.expandeddelight.sweet_berry_jelly_sandwich": "Peanut Butter and Sweet Berry Jam Sandwich",
-  "item.expandeddelight.glow_berry_jelly_sandwich": "Peanut Butter and Glow Berry Jam Sandwich",
-  
-  "item.expandeddelight.sweet_berry_jelly": "Sweet Berry Jam",
-  "item.expandeddelight.glow_berry_jelly": "Glow Berry Jam",
+  "item.expandeddelight.peanut": "Peanut",
+  "item.expandeddelight.peanut_butter": "Peanut Butter",
+  "item.expandeddelight.peanut_butter_sandwich": "Peanut Butter Sandwich",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Peanut Butter and Honey Sandwich",
+  "item.expandeddelight.peanut_salad": "Peanut Salad",
+  "item.expandeddelight.peanut_honey_soup": "Honey Peanut Soup",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Peanut Butter and Sweet Berry Jelly Sandwich",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Peanut Butter and Glow Berry Jelly Sandwich",
 
-  "block.expandeddelight.sweet_potato_crate": "Kumara Crate",
-  "block.expandeddelight.wild_sweet_potatoes": "Wild Kumara",
-  "block.expandeddelight.sweet_potatoes_crop": "Kumara",
+  "item.expandeddelight.glass_jar": "Glass Jar",
+  "item.expandeddelight.raw_cinnamon": "Cinnamon Stick",
+  "item.expandeddelight.ground_cinnamon": "Cinnamon",
+  "item.expandeddelight.salt_rock": "Salt Rock",
+  "item.expandeddelight.ground_salt": "Salt",
 
-  "block.expandeddelight.chili_pepper_crate": "Chilli Crate",
-  "block.expandeddelight.wild_chili_pepper": "Wild Chilli",
-  "block.expandeddelight.chili_pepper_crop": "Chilli"
+  "item.expandeddelight.cheese_wheel": "Cheese Wheel",
+  "item.expandeddelight.cheese_slice": "Cheese Slice",
+  "item.expandeddelight.cheese_sandwich": "Cheese Sandwich",
+  "item.expandeddelight.grilled_cheese": "Grilled Cheese",
+  "item.expandeddelight.mac_and_cheese": "Mac and Cheese",
+  "item.expandeddelight.sweet_roll": "Sweet Roll",
+  "item.expandeddelight.berry_sweet_roll": "Berry Sweet Roll",
+  "item.expandeddelight.glow_berry_sweet_roll": "Glow Berry Sweet Roll",
+  "item.expandeddelight.cinnamon_rice": "Cinnamon Rice",
+  "item.expandeddelight.cinnamon_apples": "Cinnamon Apples",
+  "item.expandeddelight.chocolate_cookie": "Chocolate Cookie",
+  "item.expandeddelight.sugar_cookie": "Sugar Cookie",
+  "item.expandeddelight.snickerdoodle": "Snickerdoodle",
 
+  "item.expandeddelight.apple_juice": "Apple Juice",
+  "item.expandeddelight.sweet_berry_juice": "Sweet Berry Juice",
+  "item.expandeddelight.glow_berry_juice": "Glow Berry Juice",
+
+  "item.expandeddelight.sweet_berry_jelly": "Sweet Berry Jelly",
+  "item.expandeddelight.glow_berry_jelly": "Glow Berry Jelly",
+
+  "item.expandeddelight.mortar_and_pestle_item": "Mortar and Pestle",
+
+  "item.expandeddelight.juicer_item": "Juicer",
+
+
+  "block.expandeddelight.asparagus_crate": "Asparagus Crate",
+  "item.expandeddelight.asparagus_crate": "Asparagus Crate",
+
+  "block.expandeddelight.wild_asparagus": "Wild Asparagus",
+  "item.expandeddelight.wild_asparagus": "Wild Asparagus",
+
+  "block.expandeddelight.asparagus_crop": "Asparagus",
+  "item.expandeddelight.asparagus_crop": "Asparagus",
+
+
+  "block.expandeddelight.sweet_potato_crate": "Sweet Kumara Crate",
+  "item.expandeddelight.sweet_potato_crate": "Sweet Kumara Crate",
+
+  "block.expandeddelight.wild_sweet_potatoes": "Wild Sweet Kumaraes",
+  "item.expandeddelight.wild_sweet_potatoes": "Wild Sweet Kumaraes",
+
+  "block.expandeddelight.sweet_potatoes_crop": "Sweet Kumaraes",
+  "item.expandeddelight.sweet_potatoes_crop": "Sweet Kumaraes",
+
+
+  "block.expandeddelight.chili_pepper_crate": "Chili Pepper Crate",
+  "item.expandeddelight.chili_pepper_crate": "Chili Pepper Crate",
+
+  "block.expandeddelight.wild_chili_pepper": "Wild Chili Pepper",
+  "item.expandeddelight.wild_chili_pepper": "Wild Chili Pepper",
+
+  "block.expandeddelight.chili_pepper_crop": "Chili Peppers",
+  "item.expandeddelight.chili_pepper_crop": "Chili Peppers",
+
+
+  "block.expandeddelight.wild_peanuts": "Wild Peanuts",
+  "item.expandeddelight.wild_peanuts": "Wild Peanuts",
+
+  "block.expandeddelight.peanut_crop": "Peanuts",
+  "item.expandeddelight.peanut_crop": "Peanuts",
+
+
+  "block.expandeddelight.cinnamon_sapling": "Cinnamon Sapling",
+  "item.expandeddelight.cinnamon_sapling": "Cinnamon Sapling",
+
+  "block.expandeddelight.cinnamon_log": "Cinnamon Log",
+  "item.expandeddelight.cinnamon_log": "Cinnamon Log",
+
+
+  "block.expandeddelight.salt_ore": "Salt Ore",
+  "item.expandeddelight.salt_ore": "Salt Ore",
+
+  "block.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
+  "item.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
+
+
+  "block.expandeddelight.juicer": "Juicer",
+  "item.expandeddelight.juicer": "Juicer",
+
+
+  "block.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
+  "item.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
+  "block.expandeddelight.mortar_and_pestle.pass": "That isn't something you can crush...",
+
+
+  "container.expandeddelight.juicer": "Juicer",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Juicing"
 }

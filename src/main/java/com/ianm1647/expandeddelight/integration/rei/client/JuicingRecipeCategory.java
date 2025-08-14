@@ -1,7 +1,8 @@
-package com.ianm1647.expandeddelight.integration.rei.juicing;
+package com.ianm1647.expandeddelight.integration.rei.client;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREI;
+import com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREICommon;
+import com.ianm1647.expandeddelight.integration.rei.juicing.JuicingRecipeDisplay;
 import com.ianm1647.expandeddelight.item.ItemList;
 import me.shedaniel.math.Point;
 import me.shedaniel.math.Rectangle;
@@ -38,7 +39,7 @@ public class JuicingRecipeCategory implements DisplayCategory<JuicingRecipeDispl
     }
 
     public CategoryIdentifier<? extends JuicingRecipeDisplay> getCategoryIdentifier() {
-        return ExpandedDelightREI.JUICING;
+        return ExpandedDelightREICommon.JUICING;
     }
 
     public List<Widget> setupDisplay(JuicingRecipeDisplay display, Rectangle bounds) {

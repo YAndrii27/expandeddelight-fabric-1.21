@@ -54,28 +54,49 @@
   "item.expandeddelight.juicer_item": "Exprimidor",
 
   "block.expandeddelight.asparagus_crate": "Caja de espárragos",
+  "item.expandeddelight.asparagus_crate": "Caja de espárragos",
+
   "block.expandeddelight.wild_asparagus": "Esparraguera silvestre",
+  "item.expandeddelight.wild_asparagus": "Esparraguera silvestre",
+
   "block.expandeddelight.asparagus_crop": "Esparraguera",
+  "item.expandeddelight.asparagus_crop": "Esparraguera",
 
   "block.expandeddelight.sweet_potato_crate": "Caja de boniatos",
+  "item.expandeddelight.sweet_potato_crate": "Caja de boniatos",
+
   "block.expandeddelight.wild_sweet_potatoes": "Boniato silvestre",
+  "item.expandeddelight.wild_sweet_potatoes": "Boniato silvestre",
+
   "block.expandeddelight.sweet_potatoes_crop": "Boniatos",
+  "item.expandeddelight.sweet_potatoes_crop": "Boniatos",
 
   "block.expandeddelight.chili_pepper_crate": "Caja de guindillas",
+  "item.expandeddelight.chili_pepper_crate": "Caja de guindillas",
   "block.expandeddelight.wild_chili_pepper": "Guindilla silvestre",
+  "item.expandeddelight.wild_chili_pepper": "Guindilla silvestre",
   "block.expandeddelight.chili_pepper_crop": "Guindillas",
+  "item.expandeddelight.chili_pepper_crop": "Guindillas",
 
   "block.expandeddelight.wild_peanuts": "Cacahuete silvestre",
+  "item.expandeddelight.wild_peanuts": "Cacahuete silvestre",
   "block.expandeddelight.peanut_crop": "Cacahuetes",
+  "item.expandeddelight.peanut_crop": "Cacahuetes",
 
   "block.expandeddelight.cinnamon_sapling": "Brote de canela",
+  "item.expandeddelight.cinnamon_sapling": "Brote de canela",
   "block.expandeddelight.cinnamon_log": "Tronco de canela",
+  "item.expandeddelight.cinnamon_log": "Tronco de canela",
   "block.expandeddelight.salt_ore": "Mena de sal",
+  "item.expandeddelight.salt_ore": "Mena de sal",
   "block.expandeddelight.deepslate_salt_ore": "Mena de sal de pizarra profunda",
+  "item.expandeddelight.deepslate_salt_ore": "Mena de sal de pizarra profunda",
 
   "block.expandeddelight.juicer": "Exprimidor",
+  "item.expandeddelight.juicer": "Exprimidor",
 
   "block.expandeddelight.mortar_and_pestle": "Mortero",
+  "item.expandeddelight.mortar_and_pestle": "Mortero",
   "block.expandeddelight.mortar_and_pestle.pass": "Eso no es algo que puedas aplastar...",
 
   "container.expandeddelight.juicer": "Exprimidor",

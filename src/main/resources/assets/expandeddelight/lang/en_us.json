@@ -53,30 +53,66 @@
 
   "item.expandeddelight.juicer_item": "Juicer",
 
+
   "block.expandeddelight.asparagus_crate": "Asparagus Crate",
+  "item.expandeddelight.asparagus_crate": "Asparagus Crate",
+
   "block.expandeddelight.wild_asparagus": "Wild Asparagus",
+  "item.expandeddelight.wild_asparagus": "Wild Asparagus",
+
   "block.expandeddelight.asparagus_crop": "Asparagus",
+  "item.expandeddelight.asparagus_crop": "Asparagus",
+
 
   "block.expandeddelight.sweet_potato_crate": "Sweet Potato Crate",
+  "item.expandeddelight.sweet_potato_crate": "Sweet Potato Crate",
+
   "block.expandeddelight.wild_sweet_potatoes": "Wild Sweet Potatoes",
+  "item.expandeddelight.wild_sweet_potatoes": "Wild Sweet Potatoes",
+
   "block.expandeddelight.sweet_potatoes_crop": "Sweet Potatoes",
+  "item.expandeddelight.sweet_potatoes_crop": "Sweet Potatoes",
+
 
   "block.expandeddelight.chili_pepper_crate": "Chili Pepper Crate",
+  "item.expandeddelight.chili_pepper_crate": "Chili Pepper Crate",
+
   "block.expandeddelight.wild_chili_pepper": "Wild Chili Pepper",
+  "item.expandeddelight.wild_chili_pepper": "Wild Chili Pepper",
+
   "block.expandeddelight.chili_pepper_crop": "Chili Peppers",
+  "item.expandeddelight.chili_pepper_crop": "Chili Peppers",
+
 
   "block.expandeddelight.wild_peanuts": "Wild Peanuts",
+  "item.expandeddelight.wild_peanuts": "Wild Peanuts",
+
   "block.expandeddelight.peanut_crop": "Peanuts",
+  "item.expandeddelight.peanut_crop": "Peanuts",
+
 
   "block.expandeddelight.cinnamon_sapling": "Cinnamon Sapling",
+  "item.expandeddelight.cinnamon_sapling": "Cinnamon Sapling",
+
   "block.expandeddelight.cinnamon_log": "Cinnamon Log",
+  "item.expandeddelight.cinnamon_log": "Cinnamon Log",
+
+
   "block.expandeddelight.salt_ore": "Salt Ore",
+  "item.expandeddelight.salt_ore": "Salt Ore",
+
   "block.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
+  "item.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
+
 
   "block.expandeddelight.juicer": "Juicer",
+  "item.expandeddelight.juicer": "Juicer",
+
 
   "block.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
+  "item.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
   "block.expandeddelight.mortar_and_pestle.pass": "That isn't something you can crush...",
+
 
   "container.expandeddelight.juicer": "Juicer",
 
