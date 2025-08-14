@@ -1,9 +1,7 @@
 {
   "type": "farmersdelight:cutting",
   "ingredients": [
-    {
-      "item": "expandeddelight:wild_peanuts"
-    }
+    "expandeddelight:wild_peanuts"
   ],
   "result": [
     {
@@ -20,7 +18,5 @@
       }
     }
   ],
-  "tool": {
-    "tag": "c:tools/knives"
-  }
+  "tool": "#c:tools/knife"
 }

@@ -1,9 +1,7 @@
 {
   "type": "minecraft:smelting",
   "category": "misc",
-  "ingredient": {
-    "item": "expandeddelight:salt_ore"
-  },
+  "ingredient": "expandeddelight:salt_ore",
   "result": {
     "id": "expandeddelight:salt_rock"
   },

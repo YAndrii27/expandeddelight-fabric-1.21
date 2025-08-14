@@ -7,19 +7,15 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.util.*;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.function.BooleanBiFunction;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -29,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.stream.Stream;
 
 public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider{
-    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = Properties.HORIZONTAL_FACING;
 
     public static final MapCodec<JuicerBlock> CODEC = JuicerBlock.createCodec(JuicerBlock::new);
 
@@ -142,39 +138,29 @@ public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider{
         return BlockRenderType.MODEL;
     }
 
-    @Override
-    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        if (state.getBlock() != newState.getBlock()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof JuicerBlockEntity juicerBlockEntity) {
-                ItemScatterer.spawn(world, pos, juicerBlockEntity.getDroppableInventory());
-                world.updateComparators(pos,this);
-            }
-            super.onStateReplaced(state, world, pos, newState, moved);
-        }
-    }
+    // TODO: Make it work as intended
 
-    @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof JuicerBlockEntity juicerBlockEntity) {
-//                ItemStack stack = juicerBlockEntity.useBottleOnJuice(player.getStackInHand(hand));
-                if (stack != ItemStack.EMPTY) {
-                    if (!player.getInventory().insertStack(stack)) {
-                        player.dropItem(stack, false);
-                    }
-                    world.playSound(player, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                } else {
-                    NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
-                    if (screenHandlerFactory != null) {
-                        player.openHandledScreen(screenHandlerFactory);
-                    }
-                }
-            }
-        }
-        return ItemActionResult.SUCCESS;
-    }
+//    @Override
+//    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+//        if (!world.isClient) {
+//            BlockEntity blockEntity = world.getBlockEntity(pos);
+//            if (blockEntity instanceof JuicerBlockEntity juicerBlockEntity) {
+////                ItemStack stack = juicerBlockEntity.useBottleOnJuice(player.getStackInHand(hand));
+//                if (stack != ItemStack.EMPTY) {
+//                    if (!player.getInventory().insertStack(stack)) {
+//                        player.dropItem(stack, false);
+//                    }
+//                    world.playSound(player, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+//                } else {
+//                    NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+//                    if (screenHandlerFactory != null) {
+//                        player.openHandledScreen(screenHandlerFactory);
+//                    }
+//                }
+//            }
+//        }
+//        return ActionResult.SUCCESS;
+//    }
 
     @Nullable
     @Override

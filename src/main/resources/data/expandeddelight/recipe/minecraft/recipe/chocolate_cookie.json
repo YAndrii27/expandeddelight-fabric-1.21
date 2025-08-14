@@ -4,12 +4,8 @@
     "cwc"
   ],
   "key": {
-    "c": {
-      "item": "minecraft:cocoa_beans"
-    },
-    "w": {
-      "item": "minecraft:wheat"
-    }
+    "c": "minecraft:cocoa_beans",
+    "w": "minecraft:wheat"
   },
   "result": {
     "id": "expandeddelight:chocolate_cookie",

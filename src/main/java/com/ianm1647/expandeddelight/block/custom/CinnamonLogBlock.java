@@ -12,7 +12,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -24,7 +23,7 @@ public class CinnamonLogBlock extends PillarBlock {
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (stack.getItem() instanceof AxeItem) {
             if(!player.isCreative()) {
                 stack.damage(1, player, EquipmentSlot.valueOf(hand.name()));
@@ -32,9 +31,9 @@ public class CinnamonLogBlock extends PillarBlock {
             dropStack(world, pos, new ItemStack(ItemList.RAW_CINNAMON, 2));
             world.playSound(player, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
             world.setBlockState(pos, Blocks.STRIPPED_OAK_LOG.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS)));
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         } else {
-            return ItemActionResult.FAIL;
+            return ActionResult.PASS;
         }
     }
 }

@@ -4,12 +4,8 @@
     "cwc"
   ],
   "key": {
-    "c": {
-      "item": "minecraft:wheat"
-    },
-    "w": {
-      "item": "minecraft:sugar"
-    }
+    "c": "minecraft:wheat",
+    "w": "minecraft:sugar"
   },
   "result": {
     "id": "expandeddelight:sugar_cookie",

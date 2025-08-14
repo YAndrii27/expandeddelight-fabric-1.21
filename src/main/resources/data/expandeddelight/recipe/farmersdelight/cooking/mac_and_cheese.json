@@ -1,18 +1,10 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    {
-      "tag": "c:foods/milk"
-    },
-    {
-      "tag": "c:cheese"
-    },
-    {
-      "tag": "c:foods/pastas"
-    },
-    {
-      "tag": "c:salt_dusts"
-    }
+    "#c:foods/milk",
+    "#c:cheese",
+    "#c:foods/pasta",
+    "#c:salt_dusts"
   ],
   "result": {
     "id": "expandeddelight:mac_and_cheese",

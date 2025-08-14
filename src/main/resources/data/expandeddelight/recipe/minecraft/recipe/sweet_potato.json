@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "expandeddelight:sweet_potato_crate"
-    }
+    "expandeddelight:sweet_potato_crate"
   ],
   "result": {
     "id": "expandeddelight:sweet_potato",

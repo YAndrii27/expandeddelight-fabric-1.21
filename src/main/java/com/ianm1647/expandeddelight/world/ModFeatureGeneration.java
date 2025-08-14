@@ -1,7 +1,9 @@
 package com.ianm1647.expandeddelight.world;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
+import com.ianm1647.expandeddelight.ExpandedDelightConfig;
 import com.ianm1647.expandeddelight.world.feature.ModPlacedFeatures;
+import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.registry.RegistryKey;
@@ -12,29 +14,29 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 public class ModFeatureGeneration {
 
     public static void generateFeature() {
-        if (ExpandedDelight.CONFIG.generateAsparagus) {
+        if (ExpandedDelightConfig.generateAsparagus) {
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
                     GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_ASPARAGUS_PLACED);
         }
-        if (ExpandedDelight.CONFIG.generateSweetPotatoes) {
+        if (ExpandedDelightConfig.generateSweetPotatoes) {
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE),
                     GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_SWEET_POTATO_PLACED);
         }
-        if (ExpandedDelight.CONFIG.generateChiliPeppers) {
+        if (ExpandedDelightConfig.generateChiliPeppers) {
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT),
                     GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_CHILI_PEPPER_PLACED);
         }
-        if (ExpandedDelight.CONFIG.generatePeanuts) {
+        if (ExpandedDelightConfig.generatePeanuts) {
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA),
                     GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_PEANUTS_PLACED);
         }
 
-        if (ExpandedDelight.CONFIG.generateCinnamonTrees) {
+        if (ExpandedDelightConfig.generateCinnamonTrees) {
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE),
                     GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CINNAMON_TREE_PLACED);
         }
 
-        if (ExpandedDelight.CONFIG.generateSaltOre) {
+        if (ExpandedDelightConfig.generateSaltOre) {
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.COLD_OCEAN),
                     GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.SALT_ORE_PLACED);
         }

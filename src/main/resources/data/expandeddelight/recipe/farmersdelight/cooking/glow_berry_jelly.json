@@ -1,12 +1,8 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    {
-      "item": "minecraft:glow_berries"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
+    "minecraft:glow_berries",
+    "minecraft:sugar"
   ],
   "result": {
     "id": "expandeddelight:glow_berry_jelly",

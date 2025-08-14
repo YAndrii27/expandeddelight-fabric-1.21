@@ -1,8 +1,6 @@
 {
   "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "expandeddelight:deepslate_salt_ore"
-  },
+  "ingredient": "expandeddelight:deepslate_salt_ore",
   "result":{
     "id": "expandeddelight:salt_rock"
   },

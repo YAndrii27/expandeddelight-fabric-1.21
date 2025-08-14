@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "expandeddelight:asparagus"
-    }
+    "#": "expandeddelight:asparagus"
   },
   "result": {
     "id": "expandeddelight:asparagus_crate"

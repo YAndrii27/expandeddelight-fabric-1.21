@@ -17,10 +17,6 @@ public interface ImplementedInventory extends SidedInventory {
         return () -> items;
     }
 
-    static ImplementedInventory ofSize(int size) {
-        return of(DefaultedList.ofSize(size, ItemStack.EMPTY));
-    }
-
     @Override
     default int[] getAvailableSlots(Direction side) {
         int[] result = new int[getItems().size()];
@@ -58,27 +54,11 @@ public interface ImplementedInventory extends SidedInventory {
         return true;
     }
 
-    /**
-     * Gets the item in the slot.
-     *
-     * @param slot the slot
-     * @return the item in the slot
-     */
     @Override
     default ItemStack getStack(int slot) {
         return getItems().get(slot);
     }
 
-    /**
-     * Takes a stack of the size from the slot.
-     *
-     * <p>(default implementation) If there are less items in the slot than what are requested,
-     * takes all items in that slot.
-     *
-     * @param slot the slot
-     * @param count the item count
-     * @return a stack
-     */
     @Override
     default ItemStack removeStack(int slot, int count) {
         ItemStack result = Inventories.splitStack(getItems(), slot, count);

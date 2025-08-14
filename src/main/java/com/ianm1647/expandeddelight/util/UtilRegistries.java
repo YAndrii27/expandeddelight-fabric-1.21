@@ -5,7 +5,7 @@ import com.ianm1647.expandeddelight.item.ItemList;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
 
@@ -42,7 +42,9 @@ public class UtilRegistries {
     }
 
     public static void registerFuels() {
-        FuelRegistry.INSTANCE.add(BlockList.CINNAMON_LOG, 300);
+        FuelRegistryEvents.BUILD.register(((builder, context) -> {
+            builder.add(BlockList.CINNAMON_LOG, 300);
+        }));
     }
 
     public static void registerFlammables() {

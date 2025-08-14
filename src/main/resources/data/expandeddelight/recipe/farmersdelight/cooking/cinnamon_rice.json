@@ -1,15 +1,9 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    {
-      "tag": "c:crops/rice"
-    },
-    {
-      "item": "expandeddelight:ground_cinnamon"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
+    "#c:crops/rice",
+    "expandeddelight:ground_cinnamon",
+    "minecraft:sugar"
   ],
   "result": {
     "id": "expandeddelight:cinnamon_rice",

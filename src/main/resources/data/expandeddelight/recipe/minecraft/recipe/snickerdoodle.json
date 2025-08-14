@@ -4,12 +4,8 @@
     "cwc"
   ],
   "key": {
-    "c": {
-      "item": "minecraft:wheat"
-    },
-    "w": {
-      "item": "expandeddelight:ground_cinnamon"
-    }
+    "c": "minecraft:wheat",
+    "w": "expandeddelight:ground_cinnamon"
   },
   "result": {
     "id": "expandeddelight:snickerdoodle",

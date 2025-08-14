@@ -1,13 +1,9 @@
 {
   "type": "farmersdelight:cutting",
   "ingredients": [
-    {
-      "item": "expandeddelight:cinnamon_log"
-    }
+    "expandeddelight:cinnamon_log"
   ],
-  "tool": {
-    "tag": "c:tools/axes"
-  },
+  "tool": "#minecraft:axes",
   "result": [
     {
       "item": {

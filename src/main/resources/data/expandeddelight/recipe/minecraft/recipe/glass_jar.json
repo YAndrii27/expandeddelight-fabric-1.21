@@ -6,12 +6,8 @@
     " g "
   ],
   "key": {
-    "g": {
-      "item": "minecraft:glass"
-    },
-    "p": {
-      "item": "minecraft:paper"
-    }
+    "g": "minecraft:glass",
+    "p": "minecraft:paper"
   },
   "result": {
     "id": "expandeddelight:glass_jar",

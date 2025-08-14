@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "expandeddelight:sweet_potato"
-    }
+    "#": "expandeddelight:sweet_potato"
   },
   "result": {
     "id": "expandeddelight:sweet_potato_crate"

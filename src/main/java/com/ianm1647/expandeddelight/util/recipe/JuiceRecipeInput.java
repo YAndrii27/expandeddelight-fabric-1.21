@@ -17,7 +17,7 @@ public record JuiceRecipeInput(ItemStack inputA, ItemStack inputB) implements Re
     }
 
     @Override
-    public int getSize() {
+    public int size() {
         return 2;
     }
 }

@@ -5,12 +5,8 @@
     " x "
   ],
   "key": {
-    "x": {
-      "tag": "minecraft:stone_crafting_materials"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    }
+    "x": "#minecraft:stone_crafting_materials",
+    "s": "minecraft:stick"
   },
   "result": {
     "id": "expandeddelight:mortar_and_pestle_item"

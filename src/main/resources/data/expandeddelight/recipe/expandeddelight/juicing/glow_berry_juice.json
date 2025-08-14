@@ -1,11 +1,7 @@
 {
   "type": "expandeddelight:juicing",
-  "inputA": {
-    "item": "minecraft:glow_berries"
-  },
-  "inputB": {
-    "item": "minecraft:sugar"
-  },
+  "inputA": "minecraft:glow_berries",
+  "inputB": "minecraft:sugar",
   "output": {
     "count": 1,
     "id": "expandeddelight:glow_berry_juice"

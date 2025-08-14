@@ -1,9 +1,7 @@
 {
   "type": "minecraft:campfire_cooking",
   "category": "food",
-  "ingredient": {
-    "item": "expandeddelight:cheese_sandwich"
-  },
+  "ingredient": "expandeddelight:cheese_sandwich",
   "result": {
     "id": "expandeddelight:grilled_cheese"
   },

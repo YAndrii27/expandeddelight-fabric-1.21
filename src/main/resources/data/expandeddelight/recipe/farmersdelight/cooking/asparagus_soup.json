@@ -1,15 +1,9 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    {
-      "item": "minecraft:water_bucket"
-    },
-    {
-      "tag": "c:foods/vegetables/asparagus"
-    },
-    {
-      "tag": "c:foods/leafy_green"
-    }
+    "minecraft:water_bucket",
+    "#c:foods/vegetables/asparagus",
+    "#c:foods/leafy_green"
   ],
   "result": {
     "id": "expandeddelight:asparagus_soup",

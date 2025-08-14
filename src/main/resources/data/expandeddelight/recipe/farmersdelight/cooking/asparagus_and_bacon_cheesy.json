@@ -1,20 +1,10 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    [
-      {
-        "tag": "c:foods/raw_pork"
-      }
-    ],
-    {
-      "tag": "c:foods/vegetables/asparagus"
-    },
-    {
-      "tag": "c:crops/onion"
-    },
-    {
-      "tag": "c:cheese"
-    }
+    "#c:foods/raw_pork",
+    "#c:foods/vegetables/asparagus",
+    "#c:crops/onion",
+    "#c:cheese"
   ],
   "result": {
     "id": "expandeddelight:asparagus_and_bacon_cheesy",

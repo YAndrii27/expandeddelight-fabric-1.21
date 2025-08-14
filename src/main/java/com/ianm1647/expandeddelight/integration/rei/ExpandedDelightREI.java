@@ -6,6 +6,8 @@ import com.ianm1647.expandeddelight.integration.rei.juicing.JuicingRecipeCategor
 import com.ianm1647.expandeddelight.integration.rei.juicing.JuicingRecipeDisplay;
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
 import com.ianm1647.expandeddelight.screen.custom.JuicerScreen;
+import com.ianm1647.expandeddelight.screen.custom.JuicerScreenHandler;
+import com.ianm1647.expandeddelight.util.recipe.JuiceRecipeInput;
 import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
 import me.shedaniel.math.Rectangle;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
@@ -26,7 +28,10 @@ public class ExpandedDelightREI implements REIClientPlugin {
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
-        registry.registerRecipeFiller(JuicerRecipe.class, RecipeRegistry.JUICER_TYPE, JuicingRecipeDisplay::new);
+        // TODO: figure something out for bring compatibility with REI back
+
+//        registry.registerRecipeFiller(JuicerRecipe.class, RecipeRegistry.JUICER_TYPE, JuicingRecipeDisplay::new);
+//        registry.beginRecipeFiller(JuicingRecipeDisplay.class).filterType();
     }
 
     @Override

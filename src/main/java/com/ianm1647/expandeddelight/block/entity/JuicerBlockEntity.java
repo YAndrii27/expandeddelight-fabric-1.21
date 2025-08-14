@@ -9,6 +9,7 @@ import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.recipebook.ClientRecipeManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -18,10 +19,12 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.recipe.RecipeEntry;
+import net.minecraft.recipe.ServerRecipeManager;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -102,8 +105,8 @@ public class JuicerBlockEntity extends BlockEntity implements ImplementedInvento
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         Inventories.readNbt(nbt, inventory, registryLookup);
-        progress = nbt.getInt("growth_chamber.progress");
-        maxProgress = nbt.getInt("growth_chamber.max_progress");
+        progress = nbt.getInt("growth_chamber.progress", 0);
+        maxProgress = nbt.getInt("growth_chamber.max_progress", this.maxProgress);
         super.readNbt(nbt, registryLookup);
     }
 
@@ -166,7 +169,7 @@ public class JuicerBlockEntity extends BlockEntity implements ImplementedInvento
 //        System.out.println(inventory.get(INPUT_B));
 
 //        System.out.println(this.getWorld().getRecipeManager().listAllOfType(RecipeRegistry.JUICER_TYPE));
-        return this.getWorld().getRecipeManager()
+        return ((ServerWorld) this.getWorld()).getRecipeManager()
                 .getFirstMatch(RecipeRegistry.JUICER_TYPE, new JuiceRecipeInput(inventory.get(INPUT_A), inventory.get(INPUT_B)), this.getWorld());
     }
 

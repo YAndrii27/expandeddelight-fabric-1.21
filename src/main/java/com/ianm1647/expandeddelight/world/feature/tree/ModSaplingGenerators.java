@@ -14,11 +14,3 @@ import java.util.Optional;
 public class ModSaplingGenerators {
     public static final SaplingGenerator CINNAMON = new SaplingGenerator("cinnamon", 0f, Optional.empty(), Optional.empty(), Optional.of(ModConfiguredFeatures.CINNAMON_TREE), Optional.empty(), Optional.empty(), Optional.empty());
 }
-
-//public class CinnamonSaplingGenerator extends SaplingGenerator {
-//    @Nullable
-//    @Override
-//    protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-//        return ModConfiguredFeatures.CINNAMON_TREE;
-//    }
-//}
